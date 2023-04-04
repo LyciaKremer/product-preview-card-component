@@ -28,7 +28,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: var(--dark-grayish-blue);
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
 }
 .title-perfume {
@@ -36,23 +36,28 @@ body {
   font-family: "Fraunces", serif;
   font-size: 32px;
   max-width: 200px;
+  line-height: 32px;
 }
-.card-image {
+.image-desktop {
   border-radius: 15px 0 0 15px;
   width: 300px;
 }
-.description{
+.image-mobile {
+  display: none;
+}
+.description {
   font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  width: 100%;
+  margin: 0;
 }
 .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px;
-}
-p {
-  font-family: "Montserrat", sans-serif;
-  color: var(--dark-grayish-blue);
+  padding: 35px;
 }
 .price {
   display: flex;
@@ -60,12 +65,12 @@ p {
   font-size: 30px;
   font-family: "Fraunces", serif;
   color: var(--dark-cyan);
-  gap: 10px;
+  gap: 15px;
 }
 .old-price {
   font-family: "Montserrat", sans-serif;
   color: var(--dark-grayish-blue);
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: line-through;
 }
 button {
@@ -79,4 +84,27 @@ button {
   gap: 10px;
   font-size: 16px;
   font-weight: 500;
+}
+button:hover {
+  background-color: #1a4031;
+}
+
+@media (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+  }
+  .info {
+    padding: 25px;
+    gap: 10px;
+  }
+  .image-desktop {
+    display: none;
+  }
+  .image-mobile {
+    display: flex;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+  }
 }
